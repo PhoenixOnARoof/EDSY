@@ -2415,7 +2415,7 @@ var eddb = {
 		
 		ct : {
 			name:'Thrusters',
-			modulenames:{'Thrusters':1, 'Enhanced Performance Thrusters':'Enhanced Performance', 'Mk II Agile Boost Thrusters':'Mk II Agile Boost'},
+			modulenames:{'Thrusters':1, 'Enhanced Performance Thrusters':'Enhanced Performance', 'Mk II Gravity Optimised Thrusters':'Mk II Gravity Optimised', 'Mk II Agile Boost Thrusters':'Mk II Agile Boost'},
 			keyattrs:['engoptmass','engoptmul'],
 			modifiable:['mass','integ','pwrdraw','engoptmass','engoptmul','engheat'],
 			blueprints:['ct_ct','ct_dt','ct_str'],
