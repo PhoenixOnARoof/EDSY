@@ -10,9 +10,9 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 var eddb = {
-	version : 423009903,
-	edsy_versions_db : [419039901,423009901,423009903,423009901], /* HTML,CSS,DB,JS */
-	edsy_lastmodified_db : 20251205,
+	version : 423009904,
+	edsy_versions_db : [419039901,423009901,423009904,423009904], /* HTML,CSS,DB,JS */
+	edsy_lastmodified_db : 20251209,
 	ship : {
 		 1 : {
 			fdid:128049249, fdname:'SideWinder', eddbid:18,
@@ -1139,11 +1139,11 @@ var eddb = {
 				internal :[30650,350,0,0,150,3152],
 			},
 			module:{
-				40131 : { cost:        0, mass:    0, fdid:null, fdname:'Python_NX_Armour_Grade1' }, // Lightweight Alloy
-				40122 : { cost: 27010944, mass:   26, fdid:null, fdname:'Python_NX_Armour_Grade2' }, // Reinforced Alloy
-				40113 : { cost: 60774623, mass:   53, fdid:null, fdname:'Python_NX_Armour_Grade3' }, // Military Grade Composite
-				40114 : { cost:143630693, mass:   53, fdid:null, fdname:'Python_NX_Armour_Mirrored' }, // Mirrored Surface Composite
-				40115 : { cost:159161986, mass:   53, fdid:null, fdname:'Python_NX_Armour_Reactive' }, // Reactive Surface Composite
+				40131 : { cost:        0, mass:    0, fdid:129030466, fdname:'Python_NX_Armour_Grade1' }, // Lightweight Alloy
+				40122 : { cost: 27010944, mass:   26, fdid:129030467, fdname:'Python_NX_Armour_Grade2' }, // Reinforced Alloy
+				40113 : { cost: 60774623, mass:   53, fdid:129030468, fdname:'Python_NX_Armour_Grade3' }, // Military Grade Composite
+				40114 : { cost:143630693, mass:   53, fdid:129030469, fdname:'Python_NX_Armour_Mirrored' }, // Mirrored Surface Composite
+				40115 : { cost:159161986, mass:   53, fdid:129030470, fdname:'Python_NX_Armour_Reactive' }, // Reactive Surface Composite
 			},
 		},
 		37 : {
@@ -1336,7 +1336,7 @@ var eddb = {
 			id:47, stype:'ex', name:'Caspian Explorer', class:3, cost:189326510, retail:194861290,
 			topspd:210, bstspd:290, mnv:2, shields:500, armour:345, mass:950, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
 			minthrust:76.0, boostcost:25, boostint:5.5, pitch:30, yaw:14, roll:75, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:23, // TODO: *acc
-			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:1.14, hardness:60, masslock:NaN, crew:4, // TODO: heatcap,heatdismin,masslock
+			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:1.14, hardness:60, masslock:21, crew:4, // TODO: heatcap,heatdismin
 			slots:{
 				hardpoint:[3,2,2,2,2,2,2],
 				utility  :[0,0,0,0,0,0],
@@ -1370,7 +1370,7 @@ var eddb = {
 				40110 : { cost:459288060, mass: 60.00, fdid:129036575, fdname:'Explorer_NX_Armour_Reactive', eddbid:null, hidden:0 }, // Mk II Ablative Reactive Surface Composite
 			},
 		},
-		/* 18-19: multipurpose;  29,20: combat;  39,30: industrial;  48-49,40: exploration;  54-59,50: passenger;  60: superheavy */
+		/* 18,19: multipurpose;  29,20: combat;  39,30: industrial;  48,49,40: exploration;  54-59,50: passenger;  60: superheavy */
 	}, // eddb.ship{}
 	rank : {
 		'Alliance' : [
@@ -3328,8 +3328,8 @@ var eddb = {
 		  161 : { mtype:'icr', cost:  12560, name:'Anti-Corrosion Cargo Rack (Cap: 2)',  class:1, rating:'F', cargocap: 2, fdid:128681992, fdname:'Int_CorrosionProofCargoRack_Size1_Class2', eddbid:1552 }, // at Palin, Sedesi
 		  251 : { mtype:'icr', cost:    NaN, name:'Anti-Corrosion Cargo Rack (Cap: 4)',  class:2, rating:'E', cargocap: 4, fdid:     null, fdname:'Int_CorrosionProofCargoRack_Size2_Class1', eddbid:null, hidden:1 }, // never released
 		  451 : { mtype:'icr', cost:  94330, name:'Anti-Corrosion Cargo Rack (Cap: 16)', class:4, rating:'E', cargocap:16, fdid:128833944, fdname:'Int_CorrosionProofCargoRack_Size4_Class1', eddbid:1699 }, // human tech broker
-		  551 : { mtype:'icr', cost:    NaN, name:'Anti-Corrosion Cargo Rack (Cap: 32)', class:5, rating:'E', cargocap:32, fdid:128957069, fdname:'Int_CorrosionProofCargoRack_Size5_Class1', eddbid:null, hidden:1 }, // CG reward
-		  651 : { mtype:'icr', cost:    NaN, name:'Anti-Corrosion Cargo Rack (Cap: 64)', class:6, rating:'E', cargocap:64, fdid:     null, fdname:'Int_CorrosionProofCargoRack_Size6_Class1', eddbid:null, hidden:1 }, // CG reward
+		  551 : { mtype:'icr', cost:      0, name:'Anti-Corrosion Cargo Rack (Cap: 32)', class:5, rating:'E', cargocap:32, fdid:128957069, fdname:'Int_CorrosionProofCargoRack_Size5_Class1', eddbid:null, hidden:1 }, // TODO: cost // CG reward
+		  651 : { mtype:'icr', cost:      0, name:'Anti-Corrosion Cargo Rack (Cap: 64)', class:6, rating:'E', cargocap:64, fdid:     null, fdname:'Int_CorrosionProofCargoRack_Size6_Class1', eddbid:null, hidden:1 }, // TODO: cost // CG reward
 		
 		
 		22150 : { mtype:'iclc', cost:    600, namekey:22110, name:'Collector Limpet Controller', class:1, rating:'E', mass:  0.50, integ: 24, pwrdraw:0.14, boottime:6, maxlimpet: 1, lpactrng: 800, limpettime:300, maxspd:200, multispd:60, fdid:128671229, fdname:'Int_DroneControl_Collection_Size1_Class1', eddbid:1394 },

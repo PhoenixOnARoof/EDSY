@@ -10,8 +10,8 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 window.edsy = new (function() {
-	var VERSIONS = [419039901,423009901,423009901,423009901]; /* HTML,CSS,DB,JS */
-	var LASTMODIFIED = 20251202;
+	var VERSIONS = [419039901,423009901,423009904,423009904]; /* HTML,CSS,DB,JS */
+	var LASTMODIFIED = 20251209;
 	
 	var EMPTY_OBJ = {};
 	var EMPTY_ARR = [];
@@ -6997,10 +6997,10 @@ if (true && current.dev) console.log(json.Ship+' '+modulejson.Item+' leftover '+
 		var pwrdraw_ret = current.fit.getStat('pwrdraw_ret');
 		var pwrbst = current.fit.getStat('pwrbst') / 100.0;
 		
-		// mark hidden modules
+		// mark hidden modules, but only stock versions (stored/builtin/preeng need to still show up for i.e. the CG anti-corrosion cargo racks)
 		for (var m = 0;  m < cache.hiddenmods.length;  m++) {
 			var modid = cache.hiddenmods[m];
-			var namehashes = Object.keys(current.stored.moduleNamehashStored[modid] || EMPTY_OBJ);
+			var namehashes = Object.keys(/* current.stored.moduleNamehashStored[modid] || */ EMPTY_OBJ);
 			namehashes.push('');
 			for (var n = 0;  n < namehashes.length;  n++) {
 				var namehash = namehashes[n];
