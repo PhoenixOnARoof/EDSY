@@ -10,8 +10,8 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 window.edsy = new (function() {
-	var VERSIONS = [419039901,423009901,423009904,423009904]; /* HTML,CSS,DB,JS */
-	var LASTMODIFIED = 20251209;
+	var VERSIONS = [419039901,423009901,423019900,423019900]; /* HTML,CSS,DB,JS */
+	var LASTMODIFIED = 20260223;
 	
 	var EMPTY_OBJ = {};
 	var EMPTY_ARR = [];
@@ -811,7 +811,7 @@ window.edsy = new (function() {
 	
 	var getMassCurveMultiplier = function(mass, minMass, optMass, maxMass, minMul, optMul, maxMul) {
 		// https://forums.frontier.co.uk/threads/the-one-formula-to-rule-them-all-the-mechanics-of-shield-and-thruster-mass-curves.300225/
-		return (minMul + pow(min(1.0, (maxMass - mass) / (maxMass - minMass)), log((optMul - minMul) / (maxMul - minMul)) / log((maxMass - optMass) / (maxMass - minMass))) * (maxMul - minMul));
+		return (minMul + pow(min(1.0, (maxMass - mass) / (maxMass - minMass)), log((optMul - minMul) / (maxMul - minMul)) / (optMass == minMass ? 1 : log((maxMass - optMass) / (maxMass - minMass)))) * (maxMul - minMul));
 	}; // getMassCurveMultiplier()
 	
 	

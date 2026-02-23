@@ -10,9 +10,9 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 var eddb = {
-	version : 423009904,
-	edsy_versions_db : [419039901,423009901,423009904,423009904], /* HTML,CSS,DB,JS */
-	edsy_lastmodified_db : 20251209,
+	version : 423019900,
+	edsy_versions_db : [419039901,423009901,423019900,423019900], /* HTML,CSS,DB,JS */
+	edsy_lastmodified_db : 20260223,
 	ship : {
 		 1 : {
 			fdid:128049249, fdname:'SideWinder', eddbid:18,
@@ -1370,7 +1370,35 @@ var eddb = {
 				40110 : { cost:459288060, mass: 60.00, fdid:129036575, fdname:'Explorer_NX_Armour_Reactive', eddbid:null, hidden:0 }, // Mk II Ablative Reactive Surface Composite
 			},
 		},
-		/* 18,19: multipurpose;  29,20: combat;  39,30: industrial;  48,49,40: exploration;  54-59,50: passenger;  60: superheavy */
+		29 : {
+			fdid:null, fdname:'SmallCombat01_NX', eddbid:null,
+			id:29, stype:'co', name:'Kestrel Mk II', class:1, cost:13776380, retail:14273820,
+			topspd:270, bstspd:360, mnv:8, shields:260, armour:75, mass:190, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
+			minthrust:89, boostcost:14, boostint:4.5, pitch:50, yaw:24, roll:120, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:40, // TODO: *acc
+			heatcap:277, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:0.61, hardness:55, masslock:NaN, crew:1, // TODO: heatdismin,heatdismax,masslock
+			slots:{
+				hardpoint:[3,3,3,1,1],
+				utility  :[0,0,0,0],
+				component:[1,5,5,4,1,5,2,4],
+				military :[4],
+				internal :[5,4,3,2,2,2,1],
+			},
+			stock:{
+				hardpoint:[0,0,0,72160,72160],
+				utility  :[0,0,0,0],
+				component:[40131,41550,42550,43451,44150,45550,46250,47430],
+				military :[0],
+				internal :[30550,0,250,0,0,3152,3151],
+			},
+			module:{
+				40131 : { cost:       0, mass: 0.00, fdid:129039243, fdname:'SmallCombat01_NX_Armour_Grade1', eddbid:null }, // Lightweight Alloy
+				40122 : { cost: 5709530, mass:17.00, fdid:129039244, fdname:'SmallCombat01_NX_Armour_Grade2', eddbid:null }, // Reinforced Alloy
+				40113 : { cost:12846440, mass:35.00, fdid:129039245, fdname:'SmallCombat01_NX_Armour_Grade3', eddbid:null }, // Military Grade Composite
+				40114 : { cost:30360410, mass:35.00, fdid:129039246, fdname:'SmallCombat01_NX_Armour_Mirrored', eddbid:null }, // Mirrored Surface Composite
+				40115 : { cost:33643390, mass:35.00, fdid:129039247, fdname:'SmallCombat01_NX_Armour_Reactive', eddbid:null }, // Reactive Surface Composite
+			},
+		},
+		/* 18,19: multipurpose;  20: combat;  39,30: industrial;  48,49,40: exploration;  54-59,50: passenger;  60: superheavy */
 	}, // eddb.ship{}
 	rank : {
 		'Alliance' : [
@@ -2387,7 +2415,7 @@ var eddb = {
 		
 		ct : {
 			name:'Thrusters',
-			modulenames:{'Thrusters':1, 'Enhanced Performance Thrusters':'Enhanced Performance'},
+			modulenames:{'Thrusters':1, 'Enhanced Performance Thrusters':'Enhanced Performance', 'Mk II Agile Boost Thrusters':'Mk II Agile Boost'},
 			keyattrs:['engoptmass','engoptmul'],
 			modifiable:['mass','integ','pwrdraw','engoptmass','engoptmul','engheat'],
 			blueprints:['ct_ct','ct_dt','ct_str'],
@@ -2819,6 +2847,7 @@ var eddb = {
 		83320 : { mtype:'hpa', cost: 3051200, namekey:83230, name:'Plasma Accelerator',                    mount:'F', class:3, rating:'B', mass: 8.00, integ:64, pwrdraw:1.97, boottime:0, dps:24.174, damage:83.400,distdraw:13.600,thmload:21.75, pierce:100, maximumrng:3500, shotspd: 875, rof:0.290, bstint:3.450,                       ammoclip: 5, ammomax: 100,            rldtime:6.0, brcdmg:70.890, brcpct:85, minbrc:40, maxbrc:80,             abswgt:50.000/ .83400, kinwgt:16.700/ .83400, thmwgt:16.7/ .83400, dmgfall:2000, ammocost:200,                      fdid:128049466, fdname:'Hpt_PlasmaAccelerator_Fixed_Large', eddbid:874 },
 		83410 : { mtype:'hpa', cost:13793600, namekey:83230, name:'Plasma Accelerator',                    mount:'F', class:4, rating:'A', mass:16.00, integ:80, pwrdraw:2.63, boottime:0, dps:31.313,damage:125.250,distdraw:21.040,thmload:29.46, pierce:100, maximumrng:3500, shotspd: 875, rof:0.250, bstint:4.000,                       ammoclip: 5, ammomax: 100,            rldtime:6.0,brcdmg:106.463, brcpct:85, minbrc:40, maxbrc:80,             abswgt:75.250/1.25250, kinwgt:25.000/1.25250, thmwgt:25  /1.25250, dmgfall:2000, ammocost:200,                      fdid:128049467, fdname:'Hpt_PlasmaAccelerator_Fixed_Huge', eddbid:875 },
 		83324 : { mtype:'hpa', cost: 4576800,                name:'Advanced Plasma Accelerator',  tag:'P', mount:'F', class:3, rating:'B', mass: 8.00, integ:64, pwrdraw:1.97, boottime:0, dps:28.667, damage:34.400, distdraw:5.500,thmload:11.00, pierce:100, maximumrng:3500, shotspd: 875, rof:0.833, bstint:1.200,                       ammoclip:20, ammomax: 300,            rldtime:6.0, brcdmg:30.960, brcpct:90, minbrc:40, maxbrc:80,             abswgt:20.600/ .34400, kinwgt: 6.900/ .34400, thmwgt: 6.9/ .34400, dmgfall:2000, ammocost:200,                      fdid:128671339, fdname:'Hpt_PlasmaAccelerator_Fixed_Large_Advanced', eddbid:1482 }, // powerplay // verify
+		83325 : { mtype:'hpa', cost: 4612670,                name:'Mk II Plasma Shock Accelerator',        mount:'F', class:3, rating:'B', mass: 8.00, integ:64, pwrdraw:1.51, boottime:0, dps:109.3,  damage:13.9  , distdraw:0.92 , thmload:1.7 , pierce: 60, maximumrng:3000, shotspd:1200, rof:7.8  , bstint:0.128, bstrof:28, bstsize:4, ammoclip:18, ammomax:   0,            rldtime:5.0, brcdmg: 9.8  , brcpct:70, minbrc:40, maxbrc:60,             abswgt:50.000/ .83400, kinwgt:16.700/ .83400, thmwgt:16.7/ .83400, dmgfall:2500,                                    fdid:129040538, fdname:'Hpt_MkIIPlasmaShockAutocannon_Fixed_Large', eddbid:null }, // verify: damage,distdraw,thmload,bstint,bstrof,*brc*,*wgt // TODO: builtin wpnx_aulo,wpnx_plsl
 		
 		62160 : { mtype:'hpl', cost:    2200,                name:'Pulse Laser',                           mount:'F', class:1, rating:'F', mass: 2.00, integ:40, pwrdraw:0.39, boottime:0, dps: 7.885, damage: 2.050, distdraw:0.300, thmload:0.33, pierce: 20, maximumrng:3000,               rof:3.846, bstint:0.260,                                                                          brcdmg: 1.743, brcpct:85, minbrc:40, maxbrc:80,             thmwgt:100,                                 dmgfall: 500,               fdid:128049381, fdname:'Hpt_PulseLaser_Fixed_Small', eddbid:823 },
 		62171 : { mtype:'hpl', cost:    6600, namekey:62160, name:'Pulse Laser',                           mount:'G', class:1, rating:'G', mass: 2.00, integ:40, pwrdraw:0.39, boottime:0, dps: 6.240, damage: 1.560, distdraw:0.310, thmload:0.31, pierce: 20, maximumrng:3000,               rof:4.000, bstint:0.250,                                                                          brcdmg: 1.326, brcpct:85, minbrc:40, maxbrc:80,             thmwgt:100,                                 dmgfall: 500,               fdid:128049385, fdname:'Hpt_PulseLaser_Gimbal_Small', eddbid:826 },
@@ -3005,6 +3034,8 @@ var eddb = {
 		
 		42211 : { mtype:'ct', cost:  1610080,                name:'Enhanced Performance Thrusters', class:2, rating:'A', mass:2.50, integ:40, pwrdraw:4.00, boottime:0, engminmass:50, engoptmass:60, engmaxmass:120, engminmul:90, engoptmul:115, engmaxmul:137, engheat:2.0,  minmulspd:90, optmulspd:125, maxmulspd:160, minmulacc:90, optmulacc:110, maxmulacc:120, minmulrot:90, optmulrot:110, maxmulrot:130, fdid:128682014, fdname:'Int_Engine_Size2_Class5_Fast', eddbid:1547 },
 		42311 : { mtype:'ct', cost:  5103950, namekey:42211, name:'Enhanced Performance Thrusters', class:3, rating:'A', mass:5.00, integ:55, pwrdraw:5.00, boottime:0, engminmass:70, engoptmass:90, engmaxmass:200, engminmul:90, engoptmul:115, engmaxmul:137, engheat:1.3,  minmulspd:90, optmulspd:125, maxmulspd:160, minmulacc:90, optmulacc:110, maxmulacc:120, minmulrot:90, optmulrot:110, maxmulrot:130, fdid:128682013, fdname:'Int_Engine_Size3_Class5_Fast', eddbid:1548 },
+		
+		42513 : { mtype:'ct', cost:  6803570,                name:'Mk II Agile Boost Thrusters',       class:5, rating:'A', mass: 20.00, integ:106, pwrdraw: 6.29, boottime:0, engminmass: 420, engoptmass: 420, engmaxmass:1260, engminmul:96, engoptmul:100, engmaxmul:116, engheat:1.3, reserved:{29:1}, fdid:129041074, fdname:'Int_MkIIAgileBoost_Engine_Size5_Class5', eddbid:null },
 		
 		42712 : { mtype:'ct', cost: 68368390,                name:'Mk II Gravity Optimised Thrusters', class:7, rating:'A', mass: 80.00, integ:144, pwrdraw: 9.12, boottime:0, engminmass:1080, engoptmass:2160, engmaxmass:3240, engminmul:96, engoptmul:100, engmaxmul:116, engheat:1.3, reserved:{47:1}, fdid:129039228, fdname:'Int_Engine_Size7_Class5_GravityOptimised_MkII', eddbid:null },
 		
