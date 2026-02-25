@@ -10,9 +10,9 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 var eddb = {
-	version : 423019901,
-	edsy_versions_db : [419039901,423009901,423019901,423019901], /* HTML,CSS,DB,JS */
-	edsy_lastmodified_db : 20260224,
+	version : 423019902,
+	edsy_versions_db : [419039901,423009901,423019902,423019901], /* HTML,CSS,DB,JS */
+	edsy_lastmodified_db : 20260225,
 	ship : {
 		 1 : {
 			fdid:128049249, fdname:'SideWinder', eddbid:18,
@@ -1299,8 +1299,8 @@ var eddb = {
 			fdid:129036130, fdname:'LakonMiner', eddbid:null,
 			id:38, stype:'mi', name:'Type-11 Prospector', class:2, cost:66346710, retail:67861850,
 			topspd:270, bstspd:365, mnv:2, shields:275, armour:350, mass:320, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
-			minthrust:70.5, boostcost:25, boostint:6, pitch:25, yaw:22, roll:37.5, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:22, // TODO: *acc, minpitch
-			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:0.60, hardness:58, masslock:NaN, crew:3, // TODO: heatdismin, masslock
+			minthrust:70.5, boostcost:25, boostint:6, pitch:25, yaw:22, roll:37.5, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:22, // TODO: *acc
+			heatcap:300, heatdismin:NaN, heatdismax:52.15, fuelcost:50, fuelreserve:0.60, hardness:58, masslock:NaN, crew:3, // TODO: heatdismin,masslock
 			slots:{
 				hardpoint:[3,2,2,2,1,1,1,1],
 				utility  :[0,0,0,0],
@@ -1336,7 +1336,7 @@ var eddb = {
 			id:47, stype:'ex', name:'Caspian Explorer', class:3, cost:189326510, retail:194861290,
 			topspd:210, bstspd:290, mnv:2, shields:500, armour:345, mass:950, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
 			minthrust:76.0, boostcost:25, boostint:5.5, pitch:30, yaw:14, roll:75, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:23, // TODO: *acc
-			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:1.14, hardness:60, masslock:21, crew:4, // TODO: heatcap,heatdismin
+			heatcap:341, heatdismin:NaN, heatdismax:72.10, fuelcost:50, fuelreserve:1.14, hardness:60, masslock:21, crew:4, // TODO: heatdismin
 			slots:{
 				hardpoint:[3,2,2,2,2,2,2],
 				utility  :[0,0,0,0,0,0],
@@ -1375,7 +1375,7 @@ var eddb = {
 			id:29, stype:'co', name:'Kestrel Mk II', class:1, cost:13776380, retail:14273820,
 			topspd:270, bstspd:360, mnv:8, shields:225, armour:70, mass:190, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
 			minthrust:89, boostcost:14, boostint:4.5, pitch:50, yaw:24, roll:120, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:40, // TODO: *acc
-			heatcap:277, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:0.61, hardness:55, masslock:NaN, crew:1, // TODO: heatdismin,heatdismax,masslock
+			heatcap:276, heatdismin:NaN, heatdismax:39.85, fuelcost:50, fuelreserve:0.61, hardness:55, masslock:NaN, crew:1, // TODO: heatdismin,masslock
 			slots:{
 				hardpoint:[3,3,3,1,1],
 				utility  :[0,0,0,0],
