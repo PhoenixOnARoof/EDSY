@@ -66,6 +66,8 @@ window.edsy = new (function() {
 		811400 : { name:"1D/F Mining Laser, LR, Incen",          modulehash:"JJpqG-ZH0072y006y00AkPcEy00I_ezL800PBLL",         tag:'T' }, // Torval Mining Ltd tech broker
 		722500 : { name:"2E/F Multi-cannon, RF+HC, Phasing",     modulehash:"JHewG-iS007Uy00Yuaab600f466n600soPcv400",         tag:'C' }, // CG reward
 		842200 : { name:"2B/F Rail, HC+LR, FeedCas",             modulehash:"JKZyG-ZI0080-Cp8zCpT000Yyv4b000f000iu00r900",     tag:'C' }, // CG reward
+		842240 : { name:"2B/F Imperial Hammer, HC, SupPen",      modulehash:"JKa0G-ZP0060zcQ8u00EsPcYuDrb000f000",             tag:'C' }, // CG reward
+		
 	//	862280 : { name:"2B/T Flak, Green",                      modulehash:"JL3KG-bG_W1A-wu",                                 tag:'T' }, // tech broker?
 	//	862281 : { name:"2B/T Flak, Pink",                       modulehash:"JL3KG-dG_W1A-wu",                                 tag:'T' }, // tech broker?
 	//	862282 : { name:"2B/T Flak, Red",                        modulehash:"JL3KG-fG_W1A-wu",                                 tag:'T' }, // tech broker?

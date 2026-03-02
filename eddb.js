@@ -2032,7 +2032,7 @@ var eddb = {
 		wpnx_slc : { name:'Shift-Lock Canister', special:'Area FSDs reboot', mats:{ teal:5, stwaso:3, saal:5 }, fdname:'special_shiftlock_canister' },
 		wpnx_smro : { name:'Smart Rounds', special:'No damage to untargeted ships', mats:{ mesc:5, sefipa:3, deemda:3, clscda:3 }, fdname:'special_smart_rounds' },
 		wpnx_sd : { name:'Stripped Down', mass:-10, mats:{ saal:5, car:5, tin:1 }, fdname:'special_weapon_lightweight' },
-	//	wpnx_supe : { name:'Super Penetrator', rldtime:50, special:'Target module damage', mats:{ prlial:3, refocr:3, zir:3, unshsc:5 }, fdname:'special_super_penetrator' }, // verify mats
+		wpnx_supe : { name:'Super Penetrator (Pre-Eng)', rldtime:50, special:'Target module damage', mats:{ prlial:3, refocr:3, zir:3, unshsc:5 }, fdname:'special_super_penetrator' }, // verify mats
 		hrgx_supe : { name:'Super Penetrator', thmload:-40, rldtime:50, special:'Target module damage', mats:{ prlial:3, refocr:3, zir:3, unshsc:5 }, fdname:'special_super_penetrator_cooled' },
 		wpnx_tlb : { name:'Target Lock Breaker', special:'Target loses target lock', mats:{ sel:5, sefipa:3, adenca:1 }, fdname:'special_lock_breaker' },
 		wpnx_thca : { name:'Thermal Cascade', special:'Shielded target heat increased', mats:{ hecowi:5, hyca:4, hideco:3, pho:5 }, fdname:'special_thermal_cascade' },
@@ -2302,7 +2302,7 @@ var eddb = {
 			keyattrs:['damage','distdraw','thmload','maximumrng','ammoclip'],
 			modifiable:['mass','integ','pwrdraw','damage','distdraw','thmload','pierce','maximumrng','bstint','ammoclip','ammomax','rldtime','_X_ jitter','dmgfall'],
 			blueprints:['wpn_hc','wpn_lw','wpn_lr','wpn_sr','wpn_stu'],
-			expeffects:['wpnx_db','hrgx_feca','wpnx_fc','wpnx_muse','wpnx_os','hrgx_plsl','wpnx_sd','hrgx_supe'],
+			expeffects:['wpnx_db','hrgx_feca','wpnx_fc','wpnx_muse','wpnx_os','hrgx_plsl','wpnx_sd','hrgx_supe','wpnx_supe'],
 		},
 		
 		htp : {
