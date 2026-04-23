@@ -10,9 +10,9 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 var eddb = {
-	version : 423019902,
-	edsy_versions_db : [419039901,423009901,423019902,423019901], /* HTML,CSS,DB,JS */
-	edsy_lastmodified_db : 20260225,
+	version : 423039901,
+	edsy_versions_db : [419039901,423009901,423039901,423039901], /* HTML,CSS,DB,JS */
+	edsy_lastmodified_db : 20260423,
 	ship : {
 		 1 : {
 			fdid:128049249, fdname:'SideWinder', eddbid:18,
@@ -1398,7 +1398,41 @@ var eddb = {
 				40115 : { cost:33643390, mass:35.00, fdid:129039247, fdname:'SmallCombat01_NX_Armour_Reactive', eddbid:null }, // Reactive Surface Composite
 			},
 		},
-		/* 18,19: multipurpose;  20: combat;  39,30: industrial;  48,49,40: exploration;  54-59,50: passenger;  60: superheavy */
+		54 : {
+			fdid:null, fdname:'MediumTransport01', eddbid:null, // TODO: fdid
+			id:54, stype:'pa', name:'Lynx Highliner', class:2, cost:67992080, retail:69289470,
+			topspd:285, bstspd:350, mnv:3, shields:200, armour:350, mass:260, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
+			minthrust:73.75, boostcost:14, boostint:0, pitch:26, yaw:19, roll:60, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:23, // TODO: boostcost,boostint,*acc
+			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:0.75, hardness:55, masslock:NaN, crew:2, // TODO: heatcap,heatdismin,heatdismax,masslock
+			slots:{
+				hardpoint:[3,2,2,2,2],
+				utility  :[0,0,0,0],
+				component:[1,5,6,5,6,5,3,5],
+				military :[],
+				internal :[6,6,6,5,5,4,4,3,2,1],
+			},
+			slotnames:{
+				internal:['Slot01_Size6','Passenger01','Passenger02','Passenger03','Slot02_Size5','Slot03_Size4','Slot04_Size4','Slot05_Size3','Slot06_Size2','Slot07_Size1'],
+			},
+			reserved:{
+				internal :[null,{ipc:1},{ipc:1},{ipc:1}],
+			},
+			stock:{
+				hardpoint:[0,62160,62160,0,0],
+				utility  :[0,0,0,0],
+				component:[40131,41550,42650,43551,44650,45550,46350,47530],
+				military :[],
+				internal :[30550,6550,6550,6450,6450,0,0,0,3152,3151],
+			},
+			module:{
+				40131 : { cost:        0, mass: 0.00, fdid:129041444, fdname:'MediumTransport01_Armour_Grade1', eddbid:null }, // Lightweight Alloy
+				40122 : { cost: 27715790, mass:26.00, fdid:129041445, fdname:'MediumTransport01_Armour_Grade2', eddbid:null }, // Reinforced Alloy
+				40113 : { cost: 62360520, mass:53.00, fdid:129041446, fdname:'MediumTransport01_Armour_Grade3', eddbid:null }, // Military Grade Composite
+				40114 : { cost:147378700, mass:53.00, fdid:129041447, fdname:'MediumTransport01_Armour_Mirrored', eddbid:null }, // Mirrored Surface Composite
+				40115 : { cost:163315270, mass:53.00, fdid:129041448, fdname:'MediumTransport01_Armour_Reactive', eddbid:null }, // Reactive Surface Composite
+			},
+		},
+		/* 18,19: multipurpose;  20: combat;  39,30: industrial;  48,49,40: exploration;  55-59,50: passenger;  60: superheavy */
 	}, // eddb.ship{}
 	rank : {
 		'Alliance' : [
@@ -2603,7 +2637,7 @@ var eddb = {
 		
 		ipc : {
 			name:'Passenger Cabins',
-			modulenames:{'Economy Class Passenger Cabin':1, 'Business Class Passenger Cabin':1, 'First Class Passenger Cabin':1, 'Luxury Class Passenger Cabin':1},
+			modulenames:{'Economy Class Passenger Cabin':1, 'Business Class Passenger Cabin':1, 'First Class Passenger Cabin':1, 'Luxury Class Passenger Cabin':1, 'Mk II Economy Class Passenger Cabin':'Mk II Economy', 'Mk II Business Class Passenger Cabin':'Mk II Business'},
 			keyattrs:['cabincap'],
 		},
 		
@@ -3627,22 +3661,31 @@ var eddb = {
 		
 		
 		 6250 : { mtype:'ipc', cost:   4320,               name:'Economy Class Passenger Cabin',  class:2, rating:'E', mass: 2.50, cabincap: 2, cabincls:'E', fdid:128734690, fdname:'Int_PassengerCabin_Size2_Class1', eddbid:1563 },
+		 6242 : { mtype:'ipc', cost:   5750,               name:'Mk II Economy Class Passenger Cabin',  class:2, rating:'D', mass: 2.50, cabincap: 3, cabincls:'E', reserved:{54:1}, fdid:129043770, fdname:'Int_MkII_PassengerCabin_Size2_Class1', eddbid:null },
 	//	 6251 : { mtype:'ipc', cost:    NaN,               name:'Prisoner Cells',                 class:2, rating:'E', mass: 2.50, cabincap: 2, cabincls:'P', fdid:null,      fdname:'Int_PassengerCabin_Size2_Class0', eddbid:null },
 		 6350 : { mtype:'ipc', cost:   8670, namekey:6250, name:'Economy Class Passenger Cabin',  class:3, rating:'E', mass: 5.00, cabincap: 4, cabincls:'E', fdid:128734691, fdname:'Int_PassengerCabin_Size3_Class1', eddbid:1564 },
+		 6342 : { mtype:'ipc', cost:  11540, namekey:6242, name:'Mk II Economy Class Passenger Cabin',  class:3, rating:'D', mass: 5.00, cabincap: 6, cabincls:'E', reserved:{54:1}, fdid:129043771, fdname:'Int_MkII_PassengerCabin_Size3_Class1', eddbid:null },
 	//	 6351 : { mtype:'ipc', cost:    NaN, namekey:6251, name:'Prisoner Cells',                 class:3, rating:'E', mass: 5.00, cabincap: 4, cabincls:'P', fdid:null,      fdname:'Int_PassengerCabin_Size3_Class0', eddbid:null },
 		 6340 : { mtype:'ipc', cost:  26720,               name:'Business Class Passenger Cabin', class:3, rating:'D', mass: 5.00, cabincap: 3, cabincls:'B', fdid:128734692, fdname:'Int_PassengerCabin_Size3_Class2', eddbid:1568 },
+		 6332 : { mtype:'ipc', cost:  35610,               name:'Mk II Business Class Passenger Cabin',  class:3, rating:'C', mass: 5.00, cabincap: 4, cabincls:'B', reserved:{54:1}, fdid:129043772, fdname:'Int_MkII_PassengerCabin_Size3_Class2', eddbid:null },
 		 6450 : { mtype:'ipc', cost:  18960, namekey:6250, name:'Economy Class Passenger Cabin',  class:4, rating:'E', mass:10.00, cabincap: 8, cabincls:'E', fdid:128727922, fdname:'Int_PassengerCabin_Size4_Class1', eddbid:1565 },
+		 6442 : { mtype:'ipc', cost:  25270, namekey:6242, name:'Mk II Economy Class Passenger Cabin',  class:4, rating:'D', mass:10.00, cabincap:12, cabincls:'E', reserved:{54:1}, fdid:129043773, fdname:'Int_MkII_PassengerCabin_Size4_Class1', eddbid:null },
 	//	 6451 : { mtype:'ipc', cost:    NaN, namekey:6251, name:'Prisoner Cells',                 class:4, rating:'E', mass:10.00, cabincap: 8, cabincls:'P', fdid:null,      fdname:'Int_PassengerCabin_Size4_Class0', eddbid:null },
 		 6440 : { mtype:'ipc', cost:  56870, namekey:6340, name:'Business Class Passenger Cabin', class:4, rating:'D', mass:10.00, cabincap: 6, cabincls:'B', fdid:128727923, fdname:'Int_PassengerCabin_Size4_Class2', eddbid:1569 },
+		 6432 : { mtype:'ipc', cost:  75820, namekey:6332, name:'Mk II Business Class Passenger Cabin',  class:4, rating:'C', mass:10.00, cabincap: 9, cabincls:'B', reserved:{54:1}, fdid:129043774, fdname:'Int_MkII_PassengerCabin_Size4_Class2', eddbid:null },
 		 6430 : { mtype:'ipc', cost: 170600,               name:'First Class Passenger Cabin',    class:4, rating:'C', mass:10.00, cabincap: 3, cabincls:'F', fdid:128727924, fdname:'Int_PassengerCabin_Size4_Class3', eddbid:1572 },
 		 6550 : { mtype:'ipc', cost:  34960, namekey:6250, name:'Economy Class Passenger Cabin',  class:5, rating:'E', mass:20.00, cabincap:16, cabincls:'E', fdid:128734693, fdname:'Int_PassengerCabin_Size5_Class1', eddbid:1566 },
+		 6542 : { mtype:'ipc', cost:  46610, namekey:6242, name:'Mk II Economy Class Passenger Cabin',  class:5, rating:'D', mass:20.00, cabincap:24, cabincls:'E', reserved:{54:1}, fdid:129043775, fdname:'Int_MkII_PassengerCabin_Size5_Class1', eddbid:null },
 	//	 6551 : { mtype:'ipc', cost:    NaN, namekey:6251, name:'Prisoner Cells',                 class:5, rating:'E', mass:20.00, cabincap:16, cabincls:'P', fdid:null,      fdname:'Int_PassengerCabin_Size5_Class0', eddbid:null },
 		 6540 : { mtype:'ipc', cost:  92370, namekey:6340, name:'Business Class Passenger Cabin', class:5, rating:'D', mass:20.00, cabincap:10, cabincls:'B', fdid:128734694, fdname:'Int_PassengerCabin_Size5_Class2', eddbid:1570 },
+		 6532 : { mtype:'ipc', cost: 123150, namekey:6332, name:'Mk II Business Class Passenger Cabin',  class:5, rating:'C', mass:20.00, cabincap:15, cabincls:'B', reserved:{54:1}, fdid:129043776, fdname:'Int_MkII_PassengerCabin_Size5_Class2', eddbid:null },
 		 6530 : { mtype:'ipc', cost: 340540, namekey:6430, name:'First Class Passenger Cabin',    class:5, rating:'C', mass:20.00, cabincap: 6, cabincls:'F', fdid:128734695, fdname:'Int_PassengerCabin_Size5_Class3', eddbid:1573 },
 		 6520 : { mtype:'ipc', cost:1658100,               name:'Luxury Class Passenger Cabin',   class:5, rating:'B', mass:20.00, cabincap: 4, cabincls:'L', reserved:{51:1,52:1,53:1}, fdid:128727925, fdname:'Int_PassengerCabin_Size5_Class4', eddbid:1575 },
 		 6650 : { mtype:'ipc', cost:  61420, namekey:6250, name:'Economy Class Passenger Cabin',  class:6, rating:'E', mass:40.00, cabincap:32, cabincls:'E', fdid:128727926, fdname:'Int_PassengerCabin_Size6_Class1', eddbid:1567 },
+		 6642 : { mtype:'ipc', cost:  81880, namekey:6242, name:'Mk II Economy Class Passenger Cabin',  class:6, rating:'D', mass:40.00, cabincap:48, cabincls:'E', reserved:{54:1}, fdid:129043777, fdname:'Int_MkII_PassengerCabin_Size6_Class1', eddbid:null },
 	//	 6651 : { mtype:'ipc', cost:    NaN, namekey:6251, name:'Prisoner Cells',                 class:6, rating:'E', mass:40.00, cabincap:32, cabincls:'P', fdid:null,      fdname:'Int_PassengerCabin_Size6_Class0', eddbid:null },
 		 6640 : { mtype:'ipc', cost: 184240, namekey:6340, name:'Business Class Passenger Cabin', class:6, rating:'D', mass:40.00, cabincap:16, cabincls:'B', fdid:128727927, fdname:'Int_PassengerCabin_Size6_Class2', eddbid:1571 },
+		 6632 : { mtype:'ipc', cost: 245640, namekey:6332, name:'Mk II Business Class Passenger Cabin',  class:6, rating:'C', mass:40.00, cabincap:24, cabincls:'B', reserved:{54:1}, fdid:129043778, fdname:'Int_MkII_PassengerCabin_Size6_Class2', eddbid:null },
 		 6630 : { mtype:'ipc', cost: 552700, namekey:6430, name:'First Class Passenger Cabin',    class:6, rating:'C', mass:40.00, cabincap:12, cabincls:'F', fdid:128727928, fdname:'Int_PassengerCabin_Size6_Class3', eddbid:1574 },
 		 6620 : { mtype:'ipc', cost:4974300, namekey:6520, name:'Luxury Class Passenger Cabin',   class:6, rating:'B', mass:40.00, cabincap: 8, cabincls:'L', reserved:{51:1,52:1,53:1}, fdid:128727929, fdname:'Int_PassengerCabin_Size6_Class4', eddbid:1576 },
 		

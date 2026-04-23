@@ -10,8 +10,8 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 window.edsy = new (function() {
-	var VERSIONS = [419039901,423009901,423019901,423019901]; /* HTML,CSS,DB,JS */
-	var LASTMODIFIED = 20260224;
+	var VERSIONS = [419039901,423009901,423039901,423039901]; /* HTML,CSS,DB,JS */
+	var LASTMODIFIED = 20260423;
 	
 	var EMPTY_OBJ = {};
 	var EMPTY_ARR = [];
@@ -989,9 +989,10 @@ window.edsy = new (function() {
 			if (module.reserved && !module.reserved[shipid]) return false; // module does not allow the ship (i.e. fighter hangars, luxury cabins, Mk II stuff
 			var shipreserved = ((ship.reserved || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum];
 			if (shipreserved && !shipreserved[module.mtype]) return false; // slot does not allow the module type (i.e. Beluga/Orca/Dolphin cabins-only slots, Panther cargo-only slots, Prospector mining/limpet/hangar slots)
-			// TODO: generalize these special cases for mk ii cargo racks and mk ii mining multi-limpet controllers only in 'Cargo' or 'LimpetController' slots, respectively
+			// TODO: generalize these special cases for mk ii cargo racks, mining multi-limpet controllers, passenger cabins only in 'Cargo', 'LimpetController', 'Passenger' slots, respectively
 			if (module.mtype == 'icr' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('CARGO')) return false;
 			if (module.mtype == 'imlc' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('LIMPETCONTROLLER')) return false;
+			if (module.mtype == 'ipc' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('PASSENGER')) return false;
 			return true;
 		}, // isModuleIDAllowed()
 		
