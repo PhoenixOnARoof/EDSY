@@ -12,7 +12,7 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 var eddb = {
 	version : 423039901,
 	edsy_versions_db : [419039901,423009901,423039901,423039901], /* HTML,CSS,DB,JS */
-	edsy_lastmodified_db : 20260423,
+	edsy_lastmodified_db : 20260428,
 	ship : {
 		 1 : {
 			fdid:128049249, fdname:'SideWinder', eddbid:18,
@@ -1402,7 +1402,7 @@ var eddb = {
 			fdid:null, fdname:'MediumTransport01', eddbid:null, // TODO: fdid
 			id:54, stype:'pa', name:'Lynx Highliner', class:2, cost:67992080, retail:69289470,
 			topspd:285, bstspd:350, mnv:3, shields:200, armour:350, mass:260, fwdacc:NaN, revacc:NaN, latacc:NaN, // TODO: *acc
-			minthrust:73.75, boostcost:14, boostint:0, pitch:26, yaw:19, roll:60, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:23, // TODO: boostcost,boostint,*acc
+			minthrust:73.75, boostcost:14, boostint:5, pitch:26, yaw:19, roll:60, pitchacc:NaN, yawacc:NaN, rollacc:NaN, minpitch:23, // TODO: *acc
 			heatcap:NaN, heatdismin:NaN, heatdismax:NaN, fuelcost:50, fuelreserve:0.75, hardness:55, masslock:NaN, crew:2, // TODO: heatcap,heatdismin,heatdismax,masslock
 			slots:{
 				hardpoint:[3,2,2,2,2],
@@ -3389,9 +3389,9 @@ var eddb = {
 		  550 : { mtype:'icr', cost: 111570, name:'Cargo Rack (Cap: 32)',  class:5, rating:'E', cargocap: 32, fdid:128064342, fdname:'Int_CargoRack_Size5_Class1', eddbid:1195 },
 		  650 : { mtype:'icr', cost: 362590, name:'Cargo Rack (Cap: 64)',  class:6, rating:'E', cargocap: 64, fdid:128064343, fdname:'Int_CargoRack_Size6_Class1', eddbid:1196 },
 		  750 : { mtype:'icr', cost:1178420, name:'Cargo Rack (Cap: 128)', class:7, rating:'E', cargocap:128, fdid:128064344, fdname:'Int_CargoRack_Size7_Class1', eddbid:1197 },
-		  740 : { mtype:'icr', cost:1958680, name:'Mk II Cargo Rack (Cap: 192)', class:7, rating:'D', cargocap:192, reserved:{63:1}, fdid:129034963, fdname:'Int_LargeCargoRack_Size7_Class1', eddbid:null }, // TODO: Mk II Cargo Slot only
+		  740 : { mtype:'icr', cost:1958680, name:'Mk II Cargo Rack (Cap: 192)', class:7, rating:'D', cargocap:192, reserved:{63:1}, fdid:129034963, fdname:'Int_LargeCargoRack_Size7_Class1', eddbid:null },
 		  850 : { mtype:'icr', cost:3829870, name:'Cargo Rack (Cap: 256)', class:8, rating:'E', cargocap:256, fdid:128064345, fdname:'Int_CargoRack_Size8_Class1', eddbid:1198 },
-		  840 : { mtype:'icr', cost:4929320, name:'Mk II Cargo Rack (Cap: 384)', class:8, rating:'D', cargocap:384, reserved:{63:1}, fdid:129034964, fdname:'Int_LargeCargoRack_Size8_Class1', eddbid:null }, // TODO: Mk II Cargo Slot only
+		  840 : { mtype:'icr', cost:4929320, name:'Mk II Cargo Rack (Cap: 384)', class:8, rating:'D', cargocap:384, reserved:{63:1}, fdid:129034964, fdname:'Int_LargeCargoRack_Size8_Class1', eddbid:null },
 		  151 : { mtype:'icr', cost:   6250, name:'Anti-Corrosion Cargo Rack (Cap: 1)',  class:1, rating:'E', cargocap: 1, fdid:128681641, fdname:'Int_CorrosionProofCargoRack_Size1_Class1', eddbid:1553 }, // at Palin, Sedesi
 		  161 : { mtype:'icr', cost:  12560, name:'Anti-Corrosion Cargo Rack (Cap: 2)',  class:1, rating:'F', cargocap: 2, fdid:128681992, fdname:'Int_CorrosionProofCargoRack_Size1_Class2', eddbid:1552 }, // at Palin, Sedesi
 		  251 : { mtype:'icr', cost:    NaN, name:'Anti-Corrosion Cargo Rack (Cap: 4)',  class:2, rating:'E', cargocap: 4, fdid:     null, fdname:'Int_CorrosionProofCargoRack_Size2_Class1', eddbid:null, hidden:1 }, // never released
@@ -3626,7 +3626,7 @@ var eddb = {
 		
 		19351 : { mtype:'imlc', cost:    15000, namekey:19331, name:'Mining Multi-Limpet Controller',    class:3, rating:'E', mlctype:'M', mass: 12, integ: 45, pwrdraw:0.50, boottime:6, maxlimpet: 4, lpactrng: 3300, limpettime:1/0, maxspd:200, multispd:60,                                                                    limit:'imlc', fdid:129001921, fdname:'Int_MultiDroneControl_Mining_Size3_Class1', eddbid:1816 },
 		19331 : { mtype:'imlc', cost:    50000,                name:'Mining Multi-Limpet Controller',    class:3, rating:'C', mlctype:'M', mass: 10, integ: 68, pwrdraw:0.35, boottime:6, maxlimpet: 4, lpactrng: 5000, limpettime:1/0, maxspd:200, multispd:60,                                                                    limit:'imlc', fdid:129001922, fdname:'Int_MultiDroneControl_Mining_Size3_Class3', eddbid:1817 },
-		19511 : { mtype:'imlc', cost:  2332800,                name:'Mk II Mining Multi-Limpet Controller',class:5,rating:'A',mlctype:'M', mass: 64, integ:105, pwrdraw:1.40, boottime:6, maxlimpet:14, lpactrng: 9100, limpettime:1/0, maxspd:200,multispd:176,                                                                    limit:'imlc', reserved:{38:1}, fdid:129036138, fdname:'Int_MultiDroneControl_MiningV2_Size5_Class5', eddbid:null }, // TODO: Mk II Limpet slot only
+		19511 : { mtype:'imlc', cost:  2332800,                name:'Mk II Mining Multi-Limpet Controller',class:5,rating:'A',mlctype:'M', mass: 64, integ:105, pwrdraw:1.40, boottime:6, maxlimpet:14, lpactrng: 9100, limpettime:1/0, maxspd:200,multispd:176,                                                                    limit:'imlc', reserved:{38:1}, fdid:129036138, fdname:'Int_MultiDroneControl_MiningV2_Size5_Class5', eddbid:null },
 		19332 : { mtype:'imlc', cost:    50000, namekey:19322, name:'Operations Limpet Controller',      class:3, rating:'C', mlctype:'O', mass: 10, integ: 68, pwrdraw:0.35, boottime:6, maxlimpet: 4, lpactrng: 2600, limpettime:510, maxspd:500, multispd:60,                              hacktime:16, mincargo:3, maxcargo: 8, limit:'imlc', fdid:129001923, fdname:'Int_MultiDroneControl_Operations_Size3_Class3', eddbid:1818 },
 		19322 : { mtype:'imlc', cost:    80000,                name:'Operations Limpet Controller',      class:3, rating:'B', mlctype:'O', mass: 15, integ: 80, pwrdraw:0.30, boottime:6, maxlimpet: 4, lpactrng: 3100, limpettime:420, maxspd:500, multispd:60,                              hacktime:22, mincargo:4, maxcargo: 9, limit:'imlc', fdid:129001924, fdname:'Int_MultiDroneControl_Operations_Size3_Class4', eddbid:1819 },
 		19343 : { mtype:'imlc', cost:    30000, namekey:19333, name:'Rescue Limpet Controller',          class:3, rating:'D', mlctype:'R', mass:  8, integ: 58, pwrdraw:0.40, boottime:6, maxlimpet: 4, lpactrng: 2100, limpettime:300, maxspd:500,              fuelxfer:1.0, lmprepcap: 60, hacktime:19, mincargo:2, maxcargo: 7, limit:'imlc', fdid:129001925, fdname:'Int_MultiDroneControl_Rescue_Size3_Class2', eddbid:1820 },
