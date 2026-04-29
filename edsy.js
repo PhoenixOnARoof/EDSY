@@ -10,8 +10,8 @@ Frontier Customer Services (https://forums.frontier.co.uk/threads/elite-dangerou
 */
 'use strict';
 window.edsy = new (function() {
-	var VERSIONS = [419039901,423009901,423039901,423039901]; /* HTML,CSS,DB,JS */
-	var LASTMODIFIED = 20260423;
+	var VERSIONS = [419039901,423009901,423039901,423039902]; /* HTML,CSS,DB,JS */
+	var LASTMODIFIED = 20260429;
 	
 	var EMPTY_OBJ = {};
 	var EMPTY_ARR = [];
@@ -992,7 +992,8 @@ window.edsy = new (function() {
 			// TODO: generalize these special cases for mk ii cargo racks, mining multi-limpet controllers, passenger cabins only in 'Cargo', 'LimpetController', 'Passenger' slots, respectively
 			if (module.mtype == 'icr' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('CARGO')) return false;
 			if (module.mtype == 'imlc' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('LIMPETCONTROLLER')) return false;
-			if (module.mtype == 'ipc' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('PASSENGER')) return false;
+			// apparently Mk II Passenger Cabins are *not* restricted to Passenger slots, only to the ship overall
+			// if (module.mtype == 'ipc' && module.reserved && !(((ship.slotnames || EMPTY_OBJ)[this.slotgroup] || EMPTY_OBJ)[this.slotnum] || '').toUpperCase().startsWith('PASSENGER')) return false;
 			return true;
 		}, // isModuleIDAllowed()
 		
